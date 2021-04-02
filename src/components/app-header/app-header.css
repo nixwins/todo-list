@@ -1,0 +1,20 @@
+.app-header{
+    width:100%;
+    /* background-color: #c4c4c4; */
+    margin-bottom: 10px;
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 2px solid #c4c4c4;
+    padding-bottom:5px;
+}
+
+.app-header h1, .app-header p{
+    margin:0;
+}
+
+.app-header p{
+    font-size:14px;
+    font-weight: 600;
+    color:#c4c4c4;
+}

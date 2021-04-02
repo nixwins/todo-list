@@ -1,0 +1,14 @@
+
+.todo-list-item-wrapper{
+    display:flex;
+    justify-content: space-between;
+}
+
+.todo-list-item-wrapper .btn-group{
+    width:100px;
+}
+
+.todo-list-item-wrapper .btn-group.btn-delete{
+    display: block;
+    margin-left:15px;
+}
