@@ -1,25 +1,39 @@
-import React from 'react';
+import React, {Component} from 'react';
 
 import  './todo-list-item.css';
 
-const TodoListItem = ({label, important})=>{
-    // console.log(props)
-    const style = important ? {color:"red"} : {color:"black"};
-    console.log(style)
+export default class TodoListItem extends Component{
 
-     return (
-                <div className="todo-list-item-wrapper">
-                    <div>{label}</div>
-                    <div className="btn-group">
-                            <button className="btn btn-success btn-important">
-                            <i class="fa fa-exclamation" aria-hidden="true"> </i>
-                            </button>
-                            <button className="btn btn-danger btn-delete">
-                                <i class="fa fa-trash" aria-hidden="true"></i>
-                            </button>
-                    </div>
+    render(){
+
+        const {label, done , important, onDeleted,  onToggleDone, onToggleImportant} = this.props;
+
+        let classNames = 'todo-list-item-wrapper';
+
+        if(done){
+            classNames += ' done';
+        }
+
+        if(important){
+            classNames +=" important"
+        }
+
+        return (
+            <div className={classNames}>
+                <div onClick={onToggleDone}>{label}</div>
+                <div className="btn-group">
+                        <button 
+                                onClick={ onToggleImportant }
+                                className="btn btn-success btn-important">
+                            <i className="fa fa-exclamation" aria-hidden="true"> </i>
+                        </button>
+                        <button 
+                                onClick={ onDeleted }
+                                className="btn btn-danger btn-delete">
+                            <i className="fa fa-trash" aria-hidden="true"></i>
+                        </button>
                 </div>
-            );
-};
-
-export default TodoListItem;
+            </div>
+        );
+    }
+}
