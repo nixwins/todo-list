@@ -6,3 +6,9 @@
     margin:auto;
     padding-top:100px;
 }
+.hideItems{
+    display: none;
+}
+.showItems{
+    display: block;
+}

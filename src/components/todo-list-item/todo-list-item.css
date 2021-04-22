@@ -21,3 +21,6 @@
     color:steelblue;
     font-weight: 800;
 }
+.todo-list-label{
+    cursor: pointer;
+}
